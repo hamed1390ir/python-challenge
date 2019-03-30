@@ -1,5 +1,4 @@
 import csv
-import os
 
 # Store the file path associated with the file
 file = 'budget_data.csv'
