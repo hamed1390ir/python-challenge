@@ -51,11 +51,15 @@ for i in range(len(changes)):
 
 average_change = sum(changes) / (total_months - 1)
 
-print('Financial Analysis')
-print('----------------------------')
-print(f"Total Months: {total_months}")
-print(f"Total: ${total}")
-print(f"Average Change: ${average_change}")
-print(f"Greatest Increase in Profits: {max_change_month} (${max_change})")
-print(f"Greatest Decrease in Profits: {min_change_month} (${min_change})")
 
+output = (f"\nFinancial Analysis\n"
+      f"----------------------------\n"
+      f"Total Months: {total_months}\n"
+      f"Total Revenue: ${total}\n"
+      f"Average Revenue Change: ${average_change}\n"
+      f"Greatest Increase in Revenue: {max_change_month} (${max_change})\n"
+      f"Greatest Decrease in Revenue: {min_change_month} (${min_change})\n"
+      )
+print(output)
+with open("Output.txt", "w") as text_file:
+    text_file.write(output)
